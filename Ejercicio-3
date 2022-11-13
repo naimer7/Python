@@ -1,0 +1,5 @@
+print("Cordial saludo usuario")
+peso=input("por favor ingrese su peso en KG: ")
+estatura=input("por favor ingrese su estatura en metros, utilizando punto(.): ")
+imc=round((float(peso)/float(estatura)**2),2)
+print("su ims es de " + str(imc))
