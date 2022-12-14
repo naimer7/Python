@@ -1,0 +1,22 @@
+class Estudiante():
+
+    def __init__(self, nombre, nota):
+        self.nombre = nombre
+        self.nota= nota
+
+    def aprobar(self):
+        if self.nota<3:
+            print ("Reprobado")
+        else:
+            print ("aprobado")
+
+    def __str__(self):
+        return "nombre de estudiante: {}, nota: {}".format(self.nombre, self.nota)
+
+e = Estudiante("Nairon", 5)
+print(e, e.aprobar())
+
+print("")
+
+e2= Estudiante("Andres", 1)
+print(e2, e2.aprobar())
