@@ -1,0 +1,6 @@
+import mi_ejercicio.funciones as calculadora
+from mi_ejercicio import funciones
+print(calculadora.suma(10,5))
+print(calculadora.resta(10,5))
+print(calculadora.multiplicacion(10,5))
+print(calculadora.division(10,5))
