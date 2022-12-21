@@ -1,0 +1,11 @@
+file = open('mi primer archivo.txt', 'w')
+file.write('he creado mi primer archivo,')
+file.close()
+
+file = open('mi primer archivo.txt', 'r+')
+file.readline()
+file.write(' segunda vez que escribo')
+
+file.seek(0)
+print(file.read())
+file.close()
