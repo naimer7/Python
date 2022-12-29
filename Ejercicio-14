@@ -1,0 +1,20 @@
+from tkinter import *
+
+def seleccionar():
+    monitor.config(text="{}".format(opcion.get()))
+def reset():
+    opcion.set(None)
+    monitor.config(text="")
+
+root=Tk()
+opcion=StringVar()
+opcion.set(None)
+
+Radiobutton(root, text="numero_uno", variable=opcion, value="numero_uno", command=seleccionar).pack(anchor=W)
+Radiobutton(root, text="numero_dos", variable=opcion, value="numero_dos", command=seleccionar).pack(anchor=W)
+
+monitor= Label(root)
+monitor.pack()
+Button(root, text='reiniciar', command=reset).pack()
+
+root.mainloop()
