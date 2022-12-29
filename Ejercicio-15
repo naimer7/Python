@@ -1,0 +1,14 @@
+from tkinter import *
+
+carros= Tk()
+marca=StringVar()
+lista=Listbox(carros)
+
+for item in ["Toyota","Audi","Chevrolet"]:
+    lista.insert(END,item)
+    lista.pack()
+
+label=Label(text="marcas de carro")
+label.pack()
+
+carros.mainloop()
