@@ -1,0 +1,17 @@
+import sqlite3
+
+db_connection = sqlite3.connect('tabla1.db')
+db_cursor = db_connection.cursor()
+
+db_cursor.execute("CREATE TABLE Cars(Id INT, Nombre TEXT, Marca TEXT)")
+
+db_cursor.execute("INSERT INTO Cars VALUES(1,'Tiguan', 'Vlskw')")
+db_cursor.execute("INSERT INTO Cars VALUES(2,'Sportage', 'Kia')")
+
+db_connection.commit()
+
+db_cursor.execute("SELECT * FROM Cars WHERE Nombre = 'Tiguan'")
+
+filas = db_cursor.fetchall()
+print(filas)
+db_connection.close()
